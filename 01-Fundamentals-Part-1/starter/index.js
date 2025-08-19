@@ -1,8 +1,8 @@
-/*
 // ==========================================
 // 18. Taking Decisions: if / else Statements
 // ==========================================
 
+/*
 // if - else control structure: the whole code doesn't execute linearly, we can controle if we want to execute some blocks or not.
 const age = 17;
 const firstName = "Lucía";
@@ -26,9 +26,11 @@ if (birthYear <= 2000) {
 
 console.log(century);
 
+
 // ================
 // 19. CHALLENGE #2
 // ================
+
 // Use the BMI example from Challenge #1, and the code you already wrote, and improve it:
 
 // 1. Print a nice output to the console, telling the user who has the higher BMI. The message can be either:
@@ -64,13 +66,14 @@ console.log(
     ? `Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!` 
     : `Jhon's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`
 );
-
 */
+
 
 // =================================
 // 20. Type Conversion and Coercion
 // =================================
 
+/*
 // Type Conversion is when we explicitly manually convert from one type to another.
 const inputYear = "1998";
 console.log(Number(inputYear), inputYear);
@@ -93,7 +96,90 @@ console.log(n); // logs 10 it's a number.
 
 console.log(2 + 3 + 4 + "5"); // logs 95 it's a string.
 console.log("10" - "4" - "3" - 2 + "5"); // logs 15 it's a string.
+*/
+
 
 // ============================
 // 21. Truthy and Falsy Values
 // ============================
+
+/*
+// Falsy aren't exactly false but will become false when we try to convert them into a boolean. We only have 5 falsy values in JS:
+
+// 0, '', undefined, null, NaN
+
+// Everything else are truthy values (7, 'hola')
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean('Josué'), Boolean(''));
+console.log(Boolean([]));
+
+// In practice the conversion to boolean is always implicit, always type coercion by Javascript, when?:
+
+// when using logical operators
+// in a logical context (in a condition)
+
+const money = 0;
+
+// Although money is an integer (0), JavaScript will try to coerce this into a boolean. Zero is a falsy value then this condition evaluates in false.
+if (money) { 
+  console.log("Don't spend it all ;)");
+  } else { 
+    console.log("You should get a job!");
+}
+
+// Here we have a bug or an error in our application, we only accounted for the scenario when height is undefined not when is zero. 
+let height = 0;
+if (height) { // FALSY value
+console.log("Yay! Height is defined");
+} else {
+  console.log("Height is UNDEFINED");
+}
+*/
+
+
+// ===================================
+// 22. Equality Operators: == vs. ===
+// ===================================
+
+const age = "18";
+
+// This will also return a boolean value.
+// Don't confuse this with the assignemnt operator used above.
+if(age === 18) console.log("You just became an adult :D");
+
+// === strict equality operator doesn't perform type coercion. Only returns true when both are exactly the same.
+console.log(18 === 18);
+console.log("18" === 18); // this 18 isn't converted to a number
+
+// == lose equality operator does type coercion.
+
+console.log("18" == 18); // the string will be converted to a number
+
+// Example :D
+
+// Use the strict equality operator always :D
+if(age === 18) console.log("You just became an adult :D (strict)");
+// AVOID the loose equality operator as much as possible
+if(age == 18) console.log("You just became an adult :D (loose)");
+
+let favorite = Number(prompt("What's your favorite number?"));
+console.log(favorite);
+console.log(typeof favorite);
+
+// if(favorite == 11) { // 11 == 11 type coercion performed
+//   console.log("Cool! 11 is an amazing number! (loose equality operator)");
+// } 
+
+if (favorite === 11) { // '11' === 11 doesn't perform type coercion
+  console.log("Cool! 11 is an amazing number! (strict equality operator)");
+} else if (favorite == 11) {
+  console.log("Cool! 11 is an amazing number! (loose equality operator)");
+} else {
+  console.log("Number is not 11")
+}
+
+if(favorite !== 11){ // strict negation
+  console.log("Why not 11 my friench?");
+}
