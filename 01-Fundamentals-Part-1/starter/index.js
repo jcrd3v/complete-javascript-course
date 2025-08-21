@@ -143,6 +143,7 @@ console.log("Yay! Height is defined");
 // 22. Equality Operators: == vs. ===
 // ===================================
 
+/*
 const age = "18";
 
 // This will also return a boolean value.
@@ -183,5 +184,64 @@ if (favorite === 11) { // '11' === 11 doesn't perform type coercion
 if(favorite !== 11){ // strict negation
   console.log("Why not 11 my friench?");
 }
+*/
 
 
+// ==================
+// 23. Boolean Logic
+// ==================
+
+/*
+
+AND Truth Table:
+A | B | A AND B
+--|---|--------
+F | F |   F
+F | T |   F
+T | F |   F
+T | T |   T       -> Only true when both inputs are true
+
+OR Truth Table:
+A | B | A OR B
+--|---|-------
+F | F |   F       -> Only false when both inputs are false
+F | T |   T
+T | F |   T
+T | T |   T
+
+!A -> inverts its boolean value
+!B
+
+*/
+
+
+// ======================
+// 24. Logical Operators
+// ======================
+
+const hasDriversLicence = true; // A
+const hasGoodVision = true; // B
+
+console.log(hasDriversLicence && hasGoodVision);
+console.log(hasDriversLicence || hasGoodVision);
+console.log(!hasDriversLicence);
+
+const shouldDrive = hasDriversLicence && hasGoodVision;
+
+if(shouldDrive) {
+  console.log("Sarah is able to drive!");
+} else {
+  console.log("Someone else should drive...");
+}
+
+const isNotTired = true; // C
+
+console.log(hasDriversLicence && hasGoodVision && isNotTired);
+
+let canDrive = hasDriversLicence && hasGoodVision && isNotTired;
+
+if (canDrive) {
+  console.log("Sarah is able to drive!");
+} else {
+  console.log("Someone else should drive...");
+}
