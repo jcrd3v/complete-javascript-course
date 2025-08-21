@@ -42,9 +42,9 @@ console.log(validateUserInput(username, email, age));
 // Calculate: total = (price * quantity) - discount
 // Test with cases like: calculateTotal(0, 5, 10), calculateTotal(20, '', 5), calculateTotal(15, 3), etc.
 
-
+/*
 function calculateTotal(price, quantity, discount) {
-    if (!price || !quantity){ /* 0 -> falsy (false) then !0 -> true, in other words if the negation of the falsy is true then we return Invalid input, weird but works */
+    if (!price || !quantity){ // 0 -> falsy (false) then !0 -> true, in other words if the negation of the falsy is true then we return Invalid input, weird but works
         return "Invalid input";
     } else if (!discount){
         discount = 0;
@@ -85,6 +85,7 @@ console.log(calculateTotalAI(15, 3));
 // console.log(Boolean(typeof(discount)));
 // console.log(typeof(discount));
 // console.log(discount == 'string'); // doesn't work, it gives false.
+*/
 
 /* ==================================================================================== */
 

@@ -183,3 +183,5 @@ if (favorite === 11) { // '11' === 11 doesn't perform type coercion
 if(favorite !== 11){ // strict negation
   console.log("Why not 11 my friench?");
 }
+
+
