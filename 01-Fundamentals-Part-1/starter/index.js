@@ -19,7 +19,7 @@ const birthYear = 1998;
 let century = 0; // If we would have declared this variable within the if-else block we wouldn't be able to access it outside the if-else block.
 
 if (birthYear <= 2000) {
-  century = 20 
+  century = 20
 } else {
   century = 21;
 }
@@ -51,7 +51,7 @@ const BMIMark = massMark / (heightMark * heightMark);
 const BMIJohn = massJohn / (heightJohn * heightJohn);
 console.log(BMIMark.toFixed(1), BMIJohn.toFixed(1));
 
-// Write your code below. Good luck! 🙂 
+// Write your code below. Good luck! 🙂
 
 // if (BMIMark > BMIJohn) {
 //     console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`);
@@ -62,8 +62,8 @@ console.log(BMIMark.toFixed(1), BMIJohn.toFixed(1));
 // }
 
 console.log(
-    BMIMark > BMIJohn 
-    ? `Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!` 
+    BMIMark > BMIJohn
+    ? `Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`
     : `Jhon's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`
 );
 */
@@ -123,13 +123,13 @@ console.log(Boolean([]));
 const money = 0;
 
 // Although money is an integer (0), JavaScript will try to coerce this into a boolean. Zero is a falsy value then this condition evaluates in false.
-if (money) { 
+if (money) {
   console.log("Don't spend it all ;)");
-  } else { 
+  } else {
     console.log("You should get a job!");
 }
 
-// Here we have a bug or an error in our application, we only accounted for the scenario when height is undefined not when is zero. 
+// Here we have a bug or an error in our application, we only accounted for the scenario when height is undefined not when is zero.
 let height = 0;
 if (height) { // FALSY value
 console.log("Yay! Height is defined");
@@ -171,7 +171,7 @@ console.log(typeof favorite);
 
 // if(favorite == 11) { // 11 == 11 type coercion performed
 //   console.log("Cool! 11 is an amazing number! (loose equality operator)");
-// } 
+// }
 
 if (favorite === 11) { // '11' === 11 doesn't perform type coercion
   console.log("Cool! 11 is an amazing number! (strict equality operator)");
@@ -219,6 +219,7 @@ T | T |   T
 // 24. Logical Operators
 // ======================
 
+/*
 const hasDriversLicence = true; // A
 const hasGoodVision = true; // B
 
@@ -245,3 +246,76 @@ if (canDrive) {
 } else {
   console.log("Someone else should drive...");
 }
+
+*/
+
+
+// =========================
+// 26. The switch Statement
+// =========================
+
+// Alternative way of writing complicated if statement. When we want to compare a value to different others
+
+/*
+
+const day = "thursday";
+
+switch (day) { // Can we use more than one value here?
+    case "monday": // Compares the day variable in a strict equality way day === "monday"
+        console.log("Plan course structure");
+        console.log("Go to coding meet up");
+        break; // If we comment this line. The output will be also what's within the tuesday case
+    case "tuesday":
+        console.log("Prepare theory videos");
+        break;
+    case "wednesday":
+    case "thursday":
+        console.log("Write code examples");
+        break;
+    case "friday":
+        console.log("Record videos");
+        break;
+    case "saturday":
+    case "sunday":
+        console.log("Enjoy the weekend");
+        break;
+    default: // In case that the day doesn't match with any case
+        console.log("Not a valid day");
+}
+
+if (day === "monday") {
+    console.log("Plan course structure");
+    console.log("Go to coding meet up");
+} else if (day === "tuesday") {
+    console.log("Prepare theory videos");
+} else if (day === "wednesday" || day === "thursday") {
+    console.log("Write code examples");
+} else if (day === "friday") {
+    console.log("Record videos");
+} else if (day === "saturday" || day === "sunday") {
+    console.log("Enjoy the weekend");
+} else {
+    console.log("Not a valid day");
+}
+
+*/
+
+// ===============================
+// 27. Statements and Expressions
+// ==============================
+
+// An expression is a piece of code that produces a value (i.e. 3 + 5).
+3 + 4
+1991
+true && false && !false
+
+// A statement is a bigger piece of code that doesn't produce a value. Translate our actions.
+
+if (23 > 10) {
+    const str = "23 is bigger";
+}
+
+// Javascript expects expressions and statements in different places.
+
+const me = "Josué"
+console.log(`I'm ${2037 - 1991} years old ${me}`); // Here we put an expression not an statement
