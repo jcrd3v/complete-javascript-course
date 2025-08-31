@@ -300,9 +300,12 @@ if (day === "monday") {
 
 */
 
+
 // ===============================
 // 27. Statements and Expressions
-// ==============================
+// ===============================
+
+/*
 
 // An expression is a piece of code that produces a value (i.e. 3 + 5).
 3 + 4
@@ -319,3 +322,24 @@ if (23 > 10) {
 
 const me = "Josué"
 console.log(`I'm ${2037 - 1991} years old ${me}`); // Here we put an expression not an statement
+
+*/
+
+
+// ======================================
+// 28. The Conditional (Ternary) Operator
+// ======================================
+
+const age = 27;
+
+// The ternery operator produces a value, in other words is an expression. We can use the ternary operator to declare variables conditionally
+// age >= 18 ? console.log("I like to drink wine🍷") : console.log("I like to drink water 💧");// We can only have one line of code within the if or else block. The else part is mandatory.
+
+const drink = age >= 18 ? "wine🍷" : "water 💧";
+
+console.log(drink);
+
+// We can also put this in template literals.
+console.log(`I like to drink ${age >= 18 ? "wine🍷" : "water 💧"}`);
+
+//The ternary operator is not meant to replace the if statement.

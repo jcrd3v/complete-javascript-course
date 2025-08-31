@@ -219,50 +219,50 @@ Handle both cases where yellow and amber should produce the same result
 */
 
 
-function trafficLightSystem (currentLightColor) {
-
-    if (currentLightColor === "amber")
-        currentLightColor = "yellow";
-
-    if (typeof currentLightColor === "string")
-        currentLightColor = currentLightColor.toLowerCase();
-
-    switch (currentLightColor) {
-        case "red":
-            return "Stop! Wait for green light";
-        case "yellow":
-        // case "amber":
-            return "Caution! Light is changing";
-        case "green":
-            return "Go! Drive safely";
-        default:
-            return "Traffic light malfunction - proceed with caution";
-    }
-}
-
-// Test cases for Exercise 3: Traffic Light System
-
-console.log("=== Traffic Light System Tests ===");
-
-// Test basic light colors
-console.log("Red light:", trafficLightSystem("red"));
-console.log("Green light:", trafficLightSystem("green"));
-console.log("Yellow light:", trafficLightSystem("yellow"));
-console.log("Amber light:", trafficLightSystem("amber"));
-
-// Test uppercase variations
-console.log("RED light:", trafficLightSystem("RED"));
-console.log("GREEN light:", trafficLightSystem("GREEN"));
-console.log("YELLOW light:", trafficLightSystem("YELLOW"));
-
-// Test mixed case
-console.log("Red light:", trafficLightSystem("Red"));
-console.log("Green light:", trafficLightSystem("Green"));
-console.log("Yellow light:", trafficLightSystem("Yellow"));
-
-// Test invalid inputs
-console.log("Blue light:", trafficLightSystem("blue"));
-console.log("Purple light:", trafficLightSystem("purple"));
-console.log("Empty string:", trafficLightSystem(""));
-console.log("Number input:", trafficLightSystem(123));
-console.log("Null input:", trafficLightSystem(null));
+// function trafficLightSystem (currentLightColor) {
+//
+//     if (currentLightColor === "amber")
+//         currentLightColor = "yellow";
+//
+//     if (typeof currentLightColor === "string")
+//         currentLightColor = currentLightColor.toLowerCase();
+//
+//     switch (currentLightColor) {
+//         case "red":
+//             return "Stop! Wait for green light";
+//         case "yellow":
+//         // case "amber":
+//             return "Caution! Light is changing";
+//         case "green":
+//             return "Go! Drive safely";
+//         default:
+//             return "Traffic light malfunction - proceed with caution";
+//     }
+// }
+//
+// // Test cases for Exercise 3: Traffic Light System
+//
+// console.log("=== Traffic Light System Tests ===");
+//
+// // Test basic light colors
+// console.log("Red light:", trafficLightSystem("red"));
+// console.log("Green light:", trafficLightSystem("green"));
+// console.log("Yellow light:", trafficLightSystem("yellow"));
+// console.log("Amber light:", trafficLightSystem("amber"));
+//
+// // Test uppercase variations
+// console.log("RED light:", trafficLightSystem("RED"));
+// console.log("GREEN light:", trafficLightSystem("GREEN"));
+// console.log("YELLOW light:", trafficLightSystem("YELLOW"));
+//
+// // Test mixed case
+// console.log("Red light:", trafficLightSystem("Red"));
+// console.log("Green light:", trafficLightSystem("Green"));
+// console.log("Yellow light:", trafficLightSystem("Yellow"));
+//
+// // Test invalid inputs
+// console.log("Blue light:", trafficLightSystem("blue"));
+// console.log("Purple light:", trafficLightSystem("purple"));
+// console.log("Empty string:", trafficLightSystem(""));
+// console.log("Number input:", trafficLightSystem(123));
+// console.log("Null input:", trafficLightSystem(null));
